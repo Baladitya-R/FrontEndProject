@@ -1,3 +1,4 @@
+
 import Footer from '@/components/footer'
 import Image from 'next/image'
 
@@ -8,7 +9,7 @@ export default function Home() {
       <div className="flex flex-col md:flex-row lg:px-20 md:px-2 sm:px-2">
         <div className="w-full md:w-1/2 pt-20">
           <h1 className="font-semibold text-4xl font-serif text-[#007E85] mt-5">
-            Providing Quality Healthcare for all <br />
+            Providing Quality Healthcare for a <br />
             Brighter and Healthy Future
           </h1>
           <p className='mt-5 text-xl font-serif'>
