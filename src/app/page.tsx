@@ -1,113 +1,277 @@
+import Footer from '@/components/footer'
 import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen flex-col">
+
+      <div className="flex flex-col md:flex-row lg:px-20 md:px-2 sm:px-2">
+        <div className="w-full md:w-1/2 pt-20">
+          <h1 className="font-semibold text-4xl font-serif text-[#007E85] mt-5">
+            Providing Quality Healthcare for a <br />
+            Brighter and Healthy Future
+          </h1>
+          <p className='mt-5 text-xl font-serif'>
+            At our hospital, we are dedicated to providing exceptional
+            medical care to our patients and their families. Our
+            experienced team of medical professionals, cutting-edge
+            technology, and compassionate approach make us a leader
+            in the healthcare industry.
+          </p>
+          <div className='flex  mt-20'>
+            <button className='bg-[#007E85] py-2 px-5 rounded mr-5 font-medium text-white'>Appointments</button>
+            <button>Watch Video</button>
+          </div>
+        </div>
+        <div className="w-full md:w-1/2 flex justify-center items-center mt-6 md:mt-0">
+          <Image
+            src="/image1.png"
+            alt="A doctor holding a stethoscope indicating that they offer services 24/7 and an icon of their professionals"
+            width={550}
+            height={100}
+            priority
+          />
+        </div>
+      </div>
+      <div className='bg-white shadow rounded font-serif mx-20 mb-4 px-4'>
+        <h2 className='text-2xl font-bold font-serif'>Find a Doctor</h2>
+        <div>
+          <form className='grid grid-cols-4 py-3'>
+            <div className=''>
+              <label>Name</label> <br></br>
+              <input type='text' className='py-3 px-12 border border-2 border-[#007E85] rounded' required />
+            </div>
+            <div className=''>
+              <label>Specificity</label> <br></br>
+              <input type='text' className='py-3 px-12 border border-2 border-[#007E85] rounded' required />
+            </div>
+            <div>
+              <div className="flex py-8 px-8">
+                <span className="mr-4 text-gray-700" id="toggle-label">Available</span>
+                <label className="relative inline-flex items-center cursor-pointer">
+                  <input
+                    type="checkbox"
+                    className="sr-only peer"
+                    aria-labelledby="toggle-label"
+                  />
+                  <div
+                    className="w-11 h-6 bg-gray-300 rounded-full peer-focus:ring-2 peer-focus:ring-[#007E85]
+             peer-checked:bg-[#007E85] transition-colors"
+                  ></div>
+                  <div
+                    className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transform transition-transform 
+             peer-checked:translate-x-5"
+                  ></div>
+                </label>
+              </div>
+            </div>
+            <div className='py-5'>
+              <button className='bg-[#007E85] px-10 py-3 text-white rounded'>
+                Search
+              </button>
+            </div>
+          </form>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className='mt-10 '>
+        <h2 className='text-center text-4xl font-medium text-[#007E85] font-serif'>Our results in numbers</h2>
+        <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 px-20 mt-4'>
+          <div>
+            <p className='text-center'><span className='text-5xl text-[#007E85] font-extrabold'>99%</span> <br>
+            </br>
+              <span className='text-2xl font-bold'>Customer Satisfaction</span>
+            </p>
+          </div>
+          <div>
+            <p className='text-center'><span className='text-5xl text-[#007E85] font-extrabold'>15k</span> <br>
+            </br>
+              <span className='text-2xl font-bold'>Online Patients</span>
+            </p>
+          </div>
+          <div>
+            <p className='text-center'><span className='text-5xl text-[#007E85] font-extrabold'>12k</span> <br>
+            </br>
+              <span className='text-2xl font-bold'>Patients Recovered</span>
+            </p>
+          </div>
+          <div>
+            <p className='text-center'><span className='text-5xl text-[#007E85] font-extrabold'>240%</span> <br>
+            </br>
+              <span className='text-2xl font-bold'>Company Growth</span>
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+      <div className="flex flex-col md:flex-row lg:px-20 md:px-2 sm:px-2 mt-20 py-10">
+        <div className="w-full md:w-1/2 pt-10">
+          <h1 className="font-semibold text-4xl font-serif text-[#007E85]">
+            You have lots of reasons to choose us
+          </h1>
+          <p className='mt-5 text-xl font-serif'>
+            At our hospital, we are dedicated to providing exceptional
+            medical care to our patients and their families. Our
+            experienced team of medical professionals, cutting-edge
+            technology, and compassionate approach make us a leader
+            in the healthcare industry.
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <div className='flex  mt-20'>
+            <button className='bg-[#007E85] py-2 px-5 rounded mr-5 font-medium text-white'>GET STARTED</button>
+            <button className='bg-white shadow rounded px-10'>TALK TO SALES</button>
+          </div>
+        </div>
+        <div className="w-full md:w-1/2 flex justify-center items-center mt-6 md:mt-0">
+          <Image
+            src="/image3.png"
+            alt="A doctor holding a stethoscope indicating that they offer services 24/7 and an icon of their professionals"
+            width={550}
+            height={100}
+            priority
+          />
+        </div>
       </div>
+
+      <div>
+        <h2 className='text-center text-4xl font-medium text-[#007E85] font-serif mb-3'>Services we provide</h2>
+      </div>
+
+      <div className='w-full lg:px-20 sm:px-10 md:px-10'>
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+          <div className="w-full bg-white border border-gray-200 rounded-lg shadow">
+            <a href="#">
+              <img className="rounded-t-lg w-full" src="/dental.png" alt="Dental" />
+            </a>
+            <div className="p-4">
+              <a href="#">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">Dental Treatments</h5>
+              </a>
+              <p className="mb-3 font-normal text-gray-700">
+                From routine check-ups to advanced treatments, we ensure your smile stays healthy and radiant.
+              </p>
+              
+            </div>
+          </div>
+
+          <div className="w-full bg-white border border-gray-200 rounded-lg shadow">
+            <a href="#">
+              <img className="rounded-t-lg w-full" src="/dental.png" alt="Dental Machines shown" />
+            </a>
+            <div className="p-4">
+              <a href="#">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">Orthopedic Solutions</h5>
+              </a>
+              <p className="mb-3 font-normal text-gray-700">
+                Expert care for bone health, injuries, and joint conditions to restore mobility and strength.
+              </p>
+              
+            </div>
+          </div>
+
+          <div className="w-full bg-white border border-gray-200 rounded-lg shadow">
+            <a href="#">
+              <img className="rounded-t-lg w-full" src="/diago.png" alt="Advanced Diagnostics Machines" />
+            </a>
+            <div className="p-4">
+              <a href="#">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">Advanced Diagnostics</h5>
+              </a>
+              <p className="mb-3 font-normal text-gray-700">
+                Cutting-edge technology to provide accurate diagnoses for effective treatment planning.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className='w-full lg:px-20 sm:px-10 md:px-10 mt-5'>
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+          <div className="w-full bg-white border border-gray-200 rounded-lg shadow">
+            <a href="#">
+              <img className="rounded-t-lg w-full" src="/cardio.png" alt="Advanced Cardiology machines as well as speciliacits" />
+            </a>
+            <div className="p-4">
+              <a href="#">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">Specialized Cardiology Services</h5>
+              </a>
+              <p className="mb-3 font-normal text-gray-700">
+                Dedicated heart care, including prevention, diagnosis, and treatment of cardiac conditions.
+              </p>
+              
+            </div>
+          </div>
+
+          <div className="w-full bg-white border border-gray-200 rounded-lg shadow">
+            <a href="#">
+              <img className="rounded-t-lg w-full" src="/surgery.png" alt="A group of surgeons in a Surgery Room" />
+            </a>
+            <div className="p-4">
+              <a href="#">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">Precision Surgery</h5>
+              </a>
+              <p className="mb-3 font-normal text-gray-700">Skilled surgical interventions tailored to your individual needs for optimal recovery.</p>
+              
+            </div>
+          </div>
+
+          <div className="w-full bg-white border border-gray-200 rounded-lg shadow">
+            <a href="#">
+              <img className="rounded-t-lg w-full" src="/eyecare.png" alt="An Opened Eye possibly under treatment" />
+            </a>
+            <div className="p-4">
+              <a href="#">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">Complete Eye Care</h5>
+              </a>
+              <p className="mb-3 font-normal text-gray-700">
+                Protect and enhance your vision with our comprehensive eye care services.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 className='text-center text-4xl font-medium text-[#007E85] font-serif mt-10'>Meet Our Team</h2>
+      </div>
+      <div className='w-full lg:px-20 sm:px-10 md:px-10 mt-5'>
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+          <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+            <div className="flex flex-col items-center pb-10 pt-5">
+              <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src="/person1.png" alt="Bonnie image" />
+              <h5 className="mb-1 text-xl font-medium text-gray-900">Bonnie Green</h5>
+              <span className="text-sm text-gray-800">Founder and CEO</span>
+              <div className="flex mt-4 md:mt-6">
+                <a href="#" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 nodark:bg-blue-600 nodark:hover:bg-blue-700 nodark:focus:ring-blue-800">View Profile</a>
+                <a href="#" className="py-2 px-4 ms-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 nodark:focus:ring-gray-700 nodark:bg-gray-800 nodark:text-gray-400 nodark:border-gray-600 nodark:hover:text-white nodark:hover:bg-gray-700">Message</a>
+              </div>
+            </div>
+          </div>
+          <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+            <div className="flex flex-col items-center pb-10 pt-5">
+              <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src="/person1.png" alt="Bonnie image" />
+              <h5 className="mb-1 text-xl font-medium text-gray-900">Sophie Moore</h5>
+              <span className="text-sm text-gray-800">Senior Doctor</span>
+              <div className="flex mt-4 md:mt-6">
+                <a href="#" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 nodark:bg-blue-600 nodark:hover:bg-blue-700 nodark:focus:ring-blue-800">View Profile</a>
+                <a href="#" className="py-2 px-4 ms-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 nodark:focus:ring-gray-700 nodark:bg-gray-800 nodark:text-gray-400 nodark:border-gray-600 nodark:hover:text-white nodark:hover:bg-gray-700">Message</a>
+              </div>
+            </div>
+          </div>
+          <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+            <div className="flex flex-col items-center pb-10 pt-5">
+              <img className="w-24 h-24 my-3 rounded-full shadow-lg" src="/person1.png" alt="Bonnie image" />
+              <h5 className="mb-1 text-xl font-medium text-gray-900">Matt Cannon</h5>
+              <span className="text-sm text-gray-800">Head of Pharmacy</span>
+              <div className="flex mt-4 md:mt-6">
+                <a href="#" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 nodark:bg-blue-600 nodark:hover:bg-blue-700 nodark:focus:ring-blue-800">View Profile</a>
+                <a href="#" className="py-2 px-4 ms-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 nodark:focus:ring-gray-700 nodark:bg-gray-800 nodark:text-gray-400 nodark:border-gray-600 nodark:hover:text-white nodark:hover:bg-gray-700">Message</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer/>
     </main>
   )
 }
